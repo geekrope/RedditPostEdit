@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: fit-content(120%) fit-content(100%);
+            width: 100%;
+            height: 100%;
+        }
+
+        .leftMenu {
+            display: grid;
+            grid-template-rows: 24px 24px 24px;
+            padding-right: 5px;
+            padding-left: 5px;
+            height: 100%;
+        }
+
+        .bottomContent {
+            display: grid;
+            grid-template-columns: fit-content(120%) fit-content(120%) fit-content(120%) fit-content(100%);
+            width: 100%;
+            height: 100%;
+        }
+
+        .content {
+            display: grid;
+            grid-template-rows: 25px fit-content(100%) 32px;
+            grid-column-start: 2;
+            padding-left: 5px;
+            width: 100%;
+            height: 100%;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0px;
+            margin: 0px;
+        }
+        @font-face {
+            src: url(res/IBMPlexSans-Medium.ttf);
+            font-family: IBMPlexSans;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="leftMenu">
+            <img width="17" height="17" src="res/upvote.svg" style="margin:auto;vertical-align:central" />
+            <p style="font-family:IBMPlexSans, Arial, sans-serif;font-size:12px;color:rgb(0, 0, 0);font-weight:700;grid-row-start:2;margin:auto;vertical-align:middle">Upv count
+</p>
+            <img width="17" height="17" src="res/downvote.svg" style="margin:auto;vertical-align:central;grid-row-start:3;" />
+        </div>
+        <div class="content" style="padding-top:8px">
+            <p style="font-family:IBMPlexSans, Arial, sans-serif;font-size:12px;color:rgb(120, 124, 126);font-weight:400;grid-row-start:1;margin:0px;padding-left:1px">Posted by Author
+ Time
+</p>
+            <p style="font-family:IBMPlexSans, Arial, sans-serif;font-size:18px;color:rgb(34, 34, 34);font-weight:700;grid-row-start:2;margin:0px;vertical-align:top">Pohhhhhh
+</p>
+            <div class="bottomContent" style="padding-left:0px;padding-right:8px;grid-row-start:3;">
+                <div style="display:grid">
+                    <img src="res/comment.svg" style="margin:auto;margin-left:0px;margin-right:4px;vertical-align:middle;height:12px;grid-row-start:1" />
+                    <p style="font-family:IBMPlexSans, Arial, sans-serif;font-size:12px;color:rgb(120, 124, 126);font-weight:700;margin:auto;vertical-align:middle;grid-row-start:1">Comms count
+ Comments</p>
+                </div>
+                <div style="display:grid;grid-column-start:2;padding-left:8px;padding-right:4px">
+                    <p style="font-family:IBMPlexSans, Arial, sans-serif;font-size:12px;color:rgb(120, 124, 126);font-weight:700;margin:auto;vertical-align:middle;grid-row-start:1;">Share</p>
+                </div>
+                <div style="display:grid;grid-column-start:3;padding-left:4px;padding-right:4px">
+                    <img src="res/save.svg" style="margin:auto;margin-left:0px;margin-right:4px;vertical-align:middle;height:12px;grid-row-start:1" />
+                    <p style="font-family:IBMPlexSans, Arial, sans-serif;font-size:12px;color:rgb(120, 124, 126);font-weight:700;margin:auto;vertical-align:middle;grid-row-start:1">Save</p>
+                </div>
+                <div style="display:grid;grid-column-start:4;padding-left:4px;padding-right:4px">
+                    <img src="res/points.svg" style="margin:auto;margin-left:0px;margin-right:4px;vertical-align:middle;height:4px;grid-row-start:1" />                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

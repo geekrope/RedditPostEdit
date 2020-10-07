@@ -7,6 +7,56 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Viewbox>
+            <Grid Height="500" Width="200">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <RichTextBox Name="Text" Height="100" VerticalAlignment="Top" TextChanged="Text_TextChanged">
+                    <FlowDocument>
+                        <Paragraph>
+                            <Run Text="Post"/>
+                        </Paragraph>
+                    </FlowDocument>
+                </RichTextBox>
+                <RichTextBox Name="PostedBy" Grid.Row="1" Height="100" VerticalAlignment="Top" TextChanged="Text_TextChanged">
+                    <FlowDocument>
+                        <Paragraph>
+                            <Run Text="Author"/>
+                        </Paragraph>
+                    </FlowDocument>
+                </RichTextBox>
+                <RichTextBox Name="Time" Grid.Row="2" Height="100" VerticalAlignment="Top" TextChanged="Text_TextChanged">
+                    <FlowDocument>
+                        <Paragraph>
+                            <Run Text="Time"/>
+                        </Paragraph>
+                    </FlowDocument>
+                </RichTextBox>
+                <RichTextBox Name="CommentsCount" Grid.Row="3" Height="100" VerticalAlignment="Top" TextChanged="Text_TextChanged">
+                    <FlowDocument>
+                        <Paragraph>
+                            <Run Text="Comms count"/>
+                        </Paragraph>
+                    </FlowDocument>
+                </RichTextBox>
+                <RichTextBox Name="UpvotesCount" Grid.Row="4" Height="100" VerticalAlignment="Top" TextChanged="Text_TextChanged">
+                    <FlowDocument>
+                        <Paragraph>
+                            <Run Text="Upv count"/>
+                        </Paragraph>
+                    </FlowDocument>
+                </RichTextBox>
+            </Grid>
+        </Viewbox>
+        <Button Content="Preview" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="50" Background="White" Click="Button_Click"/>
     </Grid>
 </Window>
