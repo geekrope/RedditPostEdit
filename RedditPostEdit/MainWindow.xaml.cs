@@ -51,6 +51,7 @@ namespace RedditPostEdit
             var comms = GetRichTextBoxText(CommentsCount);
             var post = GetRichTextBoxText(Text);
             var time = GetRichTextBoxText(Time);
+            post.Replace("/n", "<br>");
             HtmlContent = HtmlContent.Replace(UpvTemplate, upvC);
             HtmlContent = HtmlContent.Replace(AuthorTemplate, author);
             HtmlContent = HtmlContent.Replace(CommsTemplate, comms);
